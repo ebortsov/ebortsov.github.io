@@ -1,0 +1,25 @@
+main {
+    max-width: 1000px;
+    width: 100%;
+}
+main h2 {
+    font-size: 2em;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+main {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+main p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+.block {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(245, 245, 245);
+}
