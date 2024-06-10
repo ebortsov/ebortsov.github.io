@@ -25,33 +25,26 @@ main p {
     background-color: rgb(245, 245, 245);
     gap: 20px;
 }
-.block.competitive .photo {
+.block li::before {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    content: '»';
+    margin-top: -4px;
 }
-.block.competitive .photo .desc {
+.block li:hover:has(> a:hover) {
+    color: rgb(0, 0, 255);
+}
+.block li {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
     height: 30px;
-    line-height: 30px;
-    color: white;
-    font-size: .8em;
-    background-color: rgb(110, 110, 110);
-    padding-left: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.block.competitive img {
-    display: block;
-
-    width: 300px;
 }
 .text-link {
     color: rgb(40, 40, 214);
 }
 .text-link:hover {
     cursor: pointer;
-    color: rgb(0, 0, 255)
-}
-.cf-link {
-    color: #ff8c00;
-    font-weight: bold;
-    cursor: pointer;
+    color: rgb(0, 0, 255);
 }
