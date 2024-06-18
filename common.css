@@ -10,6 +10,9 @@ body {
     font-size: 1em;
     font-family: Garamond;
 }
+main {
+    padding-bottom: 50px;
+}
 header {
     padding: 20px;
     padding-left: 0;
@@ -35,6 +38,7 @@ header {
     width: 100%;
 }
 header h1 {
+    padding-left: 10px;
     display: flex;
     align-items: center;
     grid-area: name;
@@ -48,9 +52,10 @@ header nav {
     flex-direction: row;
     align-items: center;
     height: 100%;
-    gap: 20px;
+    gap: 10px;
 }
 header a {
+    padding-left: 10px;
     display: flex;
     align-items: center;
     width: 150px;
@@ -59,6 +64,28 @@ header a {
     transition-duration: 0.05s;
     color: rgb(40, 40, 214);
     font-size: 1.5em;
+}
+.comic-link {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    transition-duration: 0s;
+}
+.comic-link:hover {
+    color: white;
+    background: linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+    box-shadow: inset 0 0 5px 5px white;
 }
 header a:hover {
     color: blue;
