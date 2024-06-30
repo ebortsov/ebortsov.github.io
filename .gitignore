@@ -1,1 +1,4 @@
 .vscode/
+.prev_files/
+node_modules
+.parcel-cache

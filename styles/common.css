@@ -30,7 +30,7 @@ header {
 .image {
     grid-area: photo;
     border-radius: 100%;
-    background-image: url(myphoto.jpg);
+    background-image: url(../assets/myphoto.jpg);
     background-size: 100%;
     background-position: center;
     margin-right: 20px;
