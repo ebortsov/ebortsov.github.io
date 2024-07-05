@@ -34,26 +34,21 @@
 
 	import { onMount } from 'svelte';
 
-onMount(async () => {
-    try {
-        const xkcd_id = await fetch_xkcd_id();
-        const comicJson = await fetch_comic(xkcd_id);
-        loadImage(comicJson);
-    } catch (error) {
-        console.error('Failed to fetch comic:', error);
-    }
-});
+	onMount(async () => {
+		try {
+			const xkcd_id = await fetch_xkcd_id();
+			const comicJson = await fetch_comic(xkcd_id);
+			loadImage(comicJson);
+		} catch (error) {
+			console.error('Failed to fetch comic:', error);
+		}
+	});
 </script>
 
 <div class="comic-loading" bind:this={comic_loading}><p>Loading...</p></div>
 
 <div class="comic" bind:this={comic_block}>
-	<img
-		src="data:"
-		alt="Random xkcd"
-		class="comic-img"
-		bind:this={comic_img}
-	/>
+	<img src="data:" alt="Random xkcd" class="comic-img" bind:this={comic_img} />
 	<div class="comic-img-description">
 		<p class="comic-img-title">
 			<b>Image title: </b><span class="placeholder" bind:this={comic_title}></span>
