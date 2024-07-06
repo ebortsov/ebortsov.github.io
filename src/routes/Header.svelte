@@ -4,7 +4,10 @@
 </script>
 
 <header>
-	<div class="image" style="background-image: {MyPhoto}"></div>
+	<!-- I KNOW I CAN USE background-image, BUT DAMN GITHUB WON'T SHOW ME THE IMAGE THEN -->
+	<div class="image-container">
+		<img class="image" alt="Profile" src={MyPhoto} />
+	</div>
 	<h1>Evgenii Bortsov</h1>
 	<nav>
 		<a href="{base}/">About</a>
@@ -18,14 +21,20 @@
 	header {
 		font-family: Garamond;
 	}
-	.image {
+	.image-container {
+		position: relative;
 		grid-area: photo;
 		border-radius: 100%;
-		background-size: 100%;
-		background-position: center;
 		margin-right: 20px;
 		height: 100%;
 		width: 100%;
+		overflow: hidden;
+	}
+	.image {
+		position: absolute;
+		height: auto;
+		height: 187px;
+		top: -5px;
 	}
 	header {
 		padding: 20px;
