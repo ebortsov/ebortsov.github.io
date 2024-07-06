@@ -1,6 +1,7 @@
 <script lang="ts">
-	import type { ComicResponse } from '$lib/types/xkcd-api-responces';
+	import type { ComicResponse } from './xkcd-api-responces';
 	import { formatDistanceToNow } from 'date-fns';
+	import { onMount } from 'svelte';
 
 	const email = 'e.bortsov@innopolis.university';
 	let comic_block: HTMLElement;
@@ -9,12 +10,28 @@
 	let comic_img_upload_date: HTMLElement;
 	let comic_loading: HTMLElement;
 
-	function fetch_xkcd_id(): Promise<string> {
-		return fetch(`https://fwd.innopolis.university/api/hw2?email=${email}`).then((r) => r.text());
+	async function fetch_xkcd_id(): Promise<string> {
+		try {
+			const response = await fetch(`https://fwd.innopolis.university/api/hw2?email=${email}`);
+			const text = await response.text();
+			console.log('Fetched xkcd_id:', text);
+			return text;
+		} catch (error) {
+			console.error('Error fetching xkcd_id:', error);
+			throw error;
+		}
 	}
 
-	function fetch_comic(xkcd_id: string): Promise<ComicResponse> {
-		return fetch(`https://fwd.innopolis.university/api/comic?id=${xkcd_id}`).then((r) => r.json());
+	async function fetch_comic(xkcd_id: string): Promise<ComicResponse> {
+		try {
+			const response = await fetch(`https://fwd.innopolis.university/api/comic?id=${xkcd_id}`);
+			const json = await response.json();
+			console.log('Fetched comic JSON:', json);
+			return json;
+		} catch (error) {
+			console.error('Error fetching comic:', error);
+			throw error;
+		}
 	}
 
 	function loadImage(comicJson: ComicResponse) {
@@ -32,8 +49,6 @@
 		comic_loading.style.display = 'none';
 	}
 
-	import { onMount } from 'svelte';
-
 	onMount(async () => {
 		try {
 			const xkcd_id = await fetch_xkcd_id();
@@ -47,8 +62,8 @@
 
 <div class="comic-loading" bind:this={comic_loading}><p>Loading...</p></div>
 
-<div class="comic" bind:this={comic_block}>
-	<img src="data:" alt="Random xkcd" class="comic-img" bind:this={comic_img} />
+<div class="comic" bind:this={comic_block} style="display: none;">
+	<img src="" alt="Random xkcd" class="comic-img" bind:this={comic_img} />
 	<div class="comic-img-description">
 		<p class="comic-img-title">
 			<b>Image title: </b><span class="placeholder" bind:this={comic_title}></span>

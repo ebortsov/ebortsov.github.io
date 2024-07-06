@@ -1,28 +1,20 @@
-<script lang="ts">
-	import GithubLogo from '$lib/images/icons/github.png';
-	import TelegramLogo from '$lib/images/icons/telegram.png';
-	import EmailLogo from '$lib/images/icons/yamail.png';
-
-	console.log(GithubLogo); // Optional: for debugging purposes
-</script>
-
 <h2>Contacts</h2>
 <ul>
 	<li>
 		<a id="tg-link" class="text-link" href="https://t.me/limbo15">
-			<img class="logo" src={TelegramLogo} alt="Telegram Logo" />
+			<img class="logo" src="/images/icons/yamail.png" alt="Telegram Logo" />
 			<span>Telegram</span>
 		</a>
 	</li>
 	<li>
 		<a id="gh-link" class="text-link" href="https://github.com/ebortsov">
-			<img class="logo" src={GithubLogo} alt="GitHub Logo" />
+			<img class="logo" src="/images/icons/telegram.png" alt="GitHub Logo" />
 			<span>GitHub</span>
 		</a>
 	</li>
 	<li>
 		<a id="email" class="text-link" href="mailto:ebortsoff@yandex.ru">
-			<img class="logo" src={EmailLogo} alt="Email Logo" />
+			<img class="logo" src="/images/icons/github.png" alt="Email Logo" />
 			<span>Email</span>
 		</a>
 	</li>
