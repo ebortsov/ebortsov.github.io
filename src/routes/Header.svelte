@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<div class="image" style="background-image: url({MyPhoto})"></div>
+	<div class="image" style="background-image: {MyPhoto}"></div>
 	<h1>Evgenii Bortsov</h1>
 	<nav>
 		<a href="{base}/">About</a>
