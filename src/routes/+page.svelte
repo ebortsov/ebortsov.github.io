@@ -37,7 +37,7 @@
 		polishing my competitive programming skills along with working on my projects.
 	</p>
 	<div class="photo">
-		<img src={ICPCPhoto.slice(1)} alt="I on ICPC NERC 2022/23" />
+		<img src={ICPCPhoto} alt="I on ICPC NERC 2022/23" />
 		<p class="desc">Me on ICPC NERC 2023</p>
 	</div>
 </div>

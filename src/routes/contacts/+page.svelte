@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import EmailLogo from '../../lib/images/icons/yamail.png';
 	import TelegramLogo from '../../lib/images/icons/telegram.png';
 	import GithubLogo from '../../lib/images/icons/github.png';
