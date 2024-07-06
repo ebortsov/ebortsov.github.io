@@ -1,15 +1,16 @@
 <script lang="ts">
 	import MyPhoto from '$lib/images/myphoto.jpg';
+	import { base } from '$app/paths';
 </script>
 
 <header>
 	<div class="image" style="background-image: url({MyPhoto})"></div>
 	<h1>Evgenii Bortsov</h1>
 	<nav>
-		<a href="/">About</a>
-		<a href="/portfolio">Portfolio</a>
-		<a href="/contacts">Contact Me</a>
-		<a href="/comic" class="comic-link">Comic</a>
+		<a href="{base}/">About</a>
+		<a href="{base}/portfolio">Portfolio</a>
+		<a href="{base}/contacts">Contact Me</a>
+		<a href="{base}/comic" class="comic-link">Comic</a>
 	</nav>
 </header>
 
