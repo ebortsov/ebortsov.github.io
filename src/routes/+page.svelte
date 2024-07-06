@@ -1,3 +1,8 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+	import ICPCPhoto from '../lib/images/icpcquarterfinals.jpg';
+</script>
+
 <h2>Bio</h2>
 
 <!-- TODO: Add a separate component for the block -->
@@ -33,7 +38,7 @@
 		polishing my competitive programming skills along with working on my projects.
 	</p>
 	<div class="photo">
-		<img src="/images/icpcquarterfinals.jpg" alt="I on ICPC NERC 2022/23" />
+		<img src={ICPCPhoto} alt="I on ICPC NERC 2022/23" />
 		<p class="desc">Me on ICPC NERC 2023</p>
 	</div>
 </div>
