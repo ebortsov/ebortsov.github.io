@@ -1,11 +1,13 @@
 <script lang="ts">
-	import '../global_styles/reset.css';
-	import '../global_styles/other.css';
-	import Header from './Header.svelte';
+	import '$lib/global_styles/reset.css';
+    import '$lib/global_styles/other.css';
+	import Header from '$lib/components/Header.svelte';
+    import Favicon from '$lib/assets/favicon.ico';
 </script>
 
 <svelte:head>
-	<title>Eugene Bortsov</title>
+	<meta name="author" content="Eugene Bortsov" />
+    <link rel="icon" href="{Favicon}" />
 </svelte:head>
 
 <Header />

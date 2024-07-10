@@ -1,19 +1,17 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import MyPhoto from '../lib/images/myphoto.jpg';
+	import MyPhoto from '$lib/assets/myphoto.jpg';
 </script>
 
 <header>
-	<!-- I KNOW I CAN USE background-image, BUT DAMN GITHUB WON'T SHOW ME THE IMAGE THEN -->
 	<div class="image-container">
 		<img class="image" alt="Profile" src={MyPhoto} />
 	</div>
 	<h1>Evgenii Bortsov</h1>
 	<nav>
-		<a href="{base}/">About</a>
-		<a href="{base}/portfolio">Portfolio</a>
-		<a href="{base}/contacts">Contact Me</a>
-		<a href="{base}/comic" class="comic-link">Comic</a>
+		<a href="/">About</a>
+		<a href="/portfolio">Portfolio</a>
+		<a href="/contacts">Contact Me</a>
+		<a href="/comic" data-sveltekit-preload-data="hover" class="comic-link">Comic</a>
 	</nav>
 </header>
 

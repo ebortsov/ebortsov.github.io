@@ -1,3 +1,9 @@
+<script lang="ts">
+    import MetaData from "$lib/components/MetaData.svelte";   
+</script>
+
+<MetaData title="My Achivements" description="Various achievements and projects of Eugene Bortsov"/>
+
 <h2>Skills</h2>
 <div class="block">
 	<ul>

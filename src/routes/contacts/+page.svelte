@@ -1,8 +1,12 @@
 <script lang="ts">
-	import EmailLogo from '../../lib/images/icons/yamail.png';
-	import TelegramLogo from '../../lib/images/icons/telegram.png';
-	import GithubLogo from '../../lib/images/icons/github.png';
+    import MetaData from '$lib/components/MetaData.svelte';
+
+	import EmailLogo from '$lib/assets/icons/yamail.png';
+	import TelegramLogo from '$lib/assets/icons/telegram.png';
+	import GithubLogo from '$lib/assets/icons/github.png';
 </script>
+
+<MetaData title="My Contacts" description="Eugene Bortsov's contacts for telegram, email, and github"/>
 
 <h2>Contacts</h2>
 <ul>

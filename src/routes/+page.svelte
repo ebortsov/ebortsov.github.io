@@ -1,6 +1,9 @@
 <script lang="ts">
-	import ICPCPhoto from '../lib/images/icpcquarterfinals.jpg';
+	import ICPCPhoto from '$lib/assets/icpcquarterfinals.jpg';
+    import MetaData from '$lib/components/MetaData.svelte';
 </script>
+
+<MetaData title="My Bio" description="Short biography of Eugene Bortsov"/>
 
 <h2>Bio</h2>
 
